@@ -1,0 +1,157 @@
+i<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st Portfolio Site via ME</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="header">
+    <div class = "container">
+        <nav>   
+            <img src="photo.png" class ="logo">
+            <ul id="sidemenu()">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#About">About</a></li> 
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#connect">Connect</a></li>
+                <i class="fa fa-times" onclick="closemenu()"></i> 
+            </ul>
+            <i class="fa da-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>A Web Developer</p>
+            <h1>Hey, I'm <span style="color:#3072a1;">K</span><span>artikey<span style="color:#3072a1;">T</span>ripathi</span><br>from India</h1>
+        </div>      
+    </div>  
+</div>
+<!----------ABOUT---------->
+<div id="About">
+    <div class= "container">
+        <div class="row">
+            <div class="About-col-1">
+                <img src="kartikey.png">
+            </div>
+            <div class="About-col-2">
+                <h1 class = "sub-title">About Me:</h1>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('background')">Background</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="background">
+                    <ul>
+                        Growing up, I was always intrigued by technology,I wrote my first line of code <br>in high school.I knew IT was my calling. 
+                        Over the years, I've spent countless hours<br> learning new programming languages,working on projects, and overcoming coding<br>challenges.
+                        One of my proudest moments was when I built my first project in python in 12th.<br>Looking ahead, I aspire to use my skills to develop innovative solutions that 
+                        can make<br> a difference in people's lives.
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        
+                        <li><span>[2023] [March]</span><br>Actively engaging in self-directed learning for web development technologies.</li>
+                        <li><span>[2023][July-Nov]</span><br>Tech Stack Familiarity:
+                                Acquired familiarity with fundamental web development technologies, including HTML, CSS, and JavaScript.</li>
+                        <li><span>[2023] [July-Jan]</span><br>learn about c,c++,java</li>
+                        <li><span>[2024]-Present</span><br>Excited to embark on hands-on projects and showcase them here soon.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020-2021</span><br>10th(SSC),Atmiya Vidhyapeeth</li>
+                        <li><span>2022-2023</span><br>12th(HSC),Atmiya Vidhyapeeth</li>
+                        <li><span>[2024(Jan)]-Presnet</span><br>Ongoing study in B.Tech CSE [COMPUTER SCIENCE ENGINEERING] 1st year student ,Silver Oak University</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--------------------Skills-------------->
+<div id="skills">
+    <div class="container">
+        <h1 class="sub-title">My Skills</h1>
+        <div class="skills-list">
+            <div class="Coding">
+                <img src="coding.jpg">
+                <div class="layer1">
+                    <h3>Programming Skills</h3>
+                    <p>Have solid Programming and Coding skills as a web developer, with expertise in various web technologies and languages.</p>
+                </div>
+            </div>
+            <div class="Time-Management">
+                <img src="time.png">
+                <div class="layer2">
+                    <h3>Time-Management</h3>
+                    <pI>Able to prioritize tasks, set realistic deadlines, and deliver high-quality work within the given timeframe.</p>
+                </div>
+            </div>
+            <div class="Team-Work">
+                <img src="team.png">
+                <div class="layer3">
+                    <h3>Team-Work</h3>
+                    <p>I am a team player who can blend in with any group and bring out the best in Everyone.</p>
+                </div>
+
+            </div>
+
+
+        </div>
+       
+    </div>
+</div>
+
+<!----------------Connect---------------->
+<div id="connect">
+    <div class="container">
+        <div class="row">
+            <div class="connect-left">
+                <h1 class="sub-title">Connect with Me</h1>
+                <p><i class="fa fa-paper-plane"></i>kartikeytripathi852@gmail.com</p>
+                <p><i class="fa fa-phone-square"></i>8320835321</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/kartikey.tripathi.16/" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/kartikey_._._/?hl=en"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/kartikey-tripathi-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin"></i></a>
+                </div>
+
+            </div>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+</body>
+</html>
